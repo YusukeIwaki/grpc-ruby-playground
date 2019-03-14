@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+service HealthCheck {
+  rpc ping(PingRequest) returns (PingResult);
+}
+
+message PingRequest {
+}
+
+message PingResult {
+  int64 now = 1;
+}
