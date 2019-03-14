@@ -1,18 +1,19 @@
+# grpc-ruby-playground
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+```
+$ bundle install
+$ bundle exec grpc_tools_ruby_protoc --ruby_out=lib --grpc_out=lib ./health_check.proto
+```
 
+and then
 
-Hi there! Welcome to Cloud9 IDE!
+```
+$ bundle exec ruby server.rb
+```
 
-To get you started, create some files, play with the terminal,
-or visit http://docs.c9.io for our documentation.
-If you want, you can also go watch some training videos at
-http://www.youtube.com/user/c9ide.
+```
+$ bundle exec ruby client.rb
+"Greeting: <PingResult: now: 1552557458>"
+```
 
-Happy coding!
-The Cloud9 IDE team
+:)
